@@ -1,0 +1,33 @@
+{
+  "name": "mearn_shopping_list",
+  "version": "1.0.0",
+  "description": "Lista de compras com MERN stack\t",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "Adelly Lima",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "gravatar": "^1.6.0",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.1",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adellylima/mern-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adellylima/mern-project/issues"
+  },
+  "homepage": "https://github.com/adellylima/mern-project#readme"
+}
