@@ -44,7 +44,7 @@ if (localStorage.jwtToken) {
     store.dispatch(clearCurrentProfile());
     // Redirect to login
     window.location.href = '/login';
-  }
+  } 
 }
 
 class App extends Component {
