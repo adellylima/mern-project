@@ -16,7 +16,20 @@ const User = require('../../models/User');
 // @route   GET api/profile/test
 // @desc    Tests profile route
 // @access  Public
-router.get('/test', (req, res) => res.json({ msg: 'Profile Works' }));
+router.get('/test', async(req, res) => {
+  try {
+      await Profile.find( (err, data) => {
+          if(err){
+              return res.status(500).send({error: err})
+          }
+          res.status(200).send(data)
+      });   
+  } catch (err) {
+      res.status(500).send({
+          error: 'Error loading product'
+      });
+  }
+})
 
 // @route   GET api/profile
 // @desc    Get current users profile
@@ -154,7 +167,7 @@ router.post(
         // Check if handle exists
         Profile.findOne({ handle: profileFields.handle }).then(profile => {
           if (profile) {
-            errors.handle = 'That handle already exists';
+            errors.handle = 'That handle already exists';  
             res.status(400).json(errors);
           }
 
