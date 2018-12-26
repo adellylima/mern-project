@@ -61,7 +61,7 @@ class Profile extends Component {
         </div>
       </div>
     );
-  }
+  } 
 }
 
 Profile.propTypes = {

@@ -44,7 +44,7 @@ class ProfileGithub extends Component {
             </h4>
             <p>{repo.description}</p>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6"> 
             <span className="badge badge-info mr-1">
               Stars: {repo.stargazers_count}
             </span>
